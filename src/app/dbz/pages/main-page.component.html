@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>DBZ page main</h1>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <!-- Con esta parte se mandan los datos al input donde se acomodan en forma de lista los datos
+      y se mandan al arreglo donde se reciben y los muestra dentro del componente de lista
+      -->
+
+      <!-- En el segundo se manda a llamar al output que libera los datos y le pasa los datos
+      a la funcion que se declara despues para hacer lo que en ella se establece que en este caso
+      es eliiminarlos
+      -->
+      <app-dbz-list [characterList]="characters"
+
+                    (onDeleteId)="onDeleteCharacter($event)">
+      </app-dbz-list>
+    </div>
+      <!-- Aqui se manda a llama al output que libera los datos de un nuevo personaje
+      y le pasa esos datos a la funcion que se declara, para poder realizar lo establecido
+      en este caso crear un nuevo personaje
+      -->
+      <div class="col">
+      <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+    </div>
+  </div>
+</div>

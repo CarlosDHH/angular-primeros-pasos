@@ -1,0 +1,21 @@
+<h4>Listado</h4>
+<ul class="list-group">
+  <!-- Aqui se reciben los datos del arreglo y se crea la lista -->
+  <li *ngFor="let character of characterList;
+  let i = index;
+  let isLast = last;
+  let isFirst = first;
+  let isEven = even;
+  let isOdd = odd;
+  " class="list-group-item d-flex justify-content-between align-items-center"
+  [ngClass]="{
+    'list-group-item-dark':isLast,
+    'list-group-item-primary':isFirst
+  }">
+    <div>
+      <span class="text-primary"> {{i + 1 }} </span>
+      Nombre: {{character.name}} - <strong>Poder: </strong> {{character.power}}
+    </div>
+    <button (click)="onDeleteCharacter(character)" class="btn btn-danger">X</button>
+  </li>
+</ul>
