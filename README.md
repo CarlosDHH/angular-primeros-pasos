@@ -1,5 +1,11 @@
 # Bases
 
+Para poder ejecutar los comandos de construccion para git tiene que tener instalado copyfiles
+npm i copyfiles
+
+tambien tiene que tener el del-cli
+npm i del-cli
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
 ## Development server
